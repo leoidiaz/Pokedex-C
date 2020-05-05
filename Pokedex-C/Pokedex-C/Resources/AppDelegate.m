@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "LIDPokemonController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,10 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    // Testing call example
+    [LIDPokemonController fetchPokemonWithSearchTerm:(@"12") completion:^(LIDPokemon * _Nonnull pokemon) {
+        NSLog(@"%@", pokemon.name);
+    }];
     return YES;
 }
 

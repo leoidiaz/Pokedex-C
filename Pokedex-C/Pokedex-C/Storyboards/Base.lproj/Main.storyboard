@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Pokemon View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LIDPokemonViewController" customModule="Pokedex_C" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +70,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="pokemonAbilitiesLabel" destination="kJJ-vo-Xlu" id="oNI-el-jxr"/>
+                        <outlet property="pokemonIDLabel" destination="ZOa-mz-Dno" id="JcG-Hk-bNr"/>
+                        <outlet property="pokemonImageView" destination="v2I-xo-SaK" id="bc4-b8-afc"/>
+                        <outlet property="pokemonNameLabel" destination="TSf-nY-4xx" id="vLp-hh-yxU"/>
+                        <outlet property="pokemonSearchBar" destination="i9b-Gz-8dn" id="Qvq-An-MD6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
