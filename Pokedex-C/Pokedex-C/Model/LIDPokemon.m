@@ -27,10 +27,33 @@
 @end
 
 #pragma mark - Dictionary Init
-@implementation LIDPokemon
-- (instancetype)initWithDictionary:(NSDictionary<NSString *,id> *)dictionary
+@implementation LIDPokemon (JSONConvertable)
+- (instancetype)initWithDictionary:(NSDictionary<NSString *,id> *)topLevelDictionary
 {
+    // let name = tld["name"]th an expression of type 'i
+    NSString *name = topLevelDictionary[@"name"];
+    //let id = tld["id"] as? Int ***
+    NSInteger identifier = [topLevelDictionary[@"id"] integerValue];
     
+    NSArray *abilitiesArrayOfDictionary = topLevelDictionary[@"abilities"];
+    
+    // let abilities: [String] = [] -- create empty array of type string
+    NSMutableArray<NSString *> *abilities = [[NSMutableArray alloc] init];
+    
+    // Null check
+    if ([name isKindOfClass:[NSNull class]] || ![abilitiesArrayOfDictionary isKindOfClass:[NSArray class]]){return nil;}
+    
+    for (NSDictionary *dictionary in abilitiesArrayOfDictionary)
+    {
+        NSDictionary *abilityDictionary = dictionary[@"ability"];
+        NSString *name = abilityDictionary[@"name"];
+        [abilities addObject:name];
+    }
+    
+    NSDictionary *spriteDictionary = topLevelDictionary[@"sprites"];
+    NSString *spritePath = spriteDictionary[@"front_default"];
+        
+    return [self initWithPokemonName:name identifier:identifier abilities:abilities spritePath:spritePath];
 }
 
 @end

@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - JSON Dictionary --Manual Codable
 @interface LIDPokemon (JSONConvertable)
-- (instancetype)initWithDictionary:(NSDictionary <NSString *, id>*)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary <NSString *, id>*)topLevelDictionary;
 // init(dictionary: Dictionary(String, Any)) -> LIDPokemon
 @end
 
