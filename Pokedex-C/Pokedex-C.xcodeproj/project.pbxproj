@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		299D7CA12461D0B80026D215 /* LIDPokemon.m in Sources */ = {isa = PBXBuildFile; fileRef = 299D7CA02461D0B80026D215 /* LIDPokemon.m */; };
 		FBCB8F912461177F001D8C7C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8F902461177F001D8C7C /* AppDelegate.m */; };
 		FBCB8F942461177F001D8C7C /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FBCB8F932461177F001D8C7C /* SceneDelegate.m */; };
 		FBCB8F9A2461177F001D8C7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBCB8F982461177F001D8C7C /* Main.storyboard */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		299D7C9F2461D0B80026D215 /* LIDPokemon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LIDPokemon.h; sourceTree = "<group>"; };
+		299D7CA02461D0B80026D215 /* LIDPokemon.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LIDPokemon.m; sourceTree = "<group>"; };
 		FBCB8F8C2461177F001D8C7C /* Pokedex-C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex-C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FBCB8F8F2461177F001D8C7C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FBCB8F902461177F001D8C7C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -39,6 +42,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		299D7C9E2461D0A90026D215 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				299D7C9F2461D0B80026D215 /* LIDPokemon.h */,
+				299D7CA02461D0B80026D215 /* LIDPokemon.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		299D7CA22461D0BC0026D215 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				299D7CA42461D0F60026D215 /* Model Controller */,
+				299D7CA32461D0C00026D215 /* View Controller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		299D7CA32461D0C00026D215 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		299D7CA42461D0F60026D215 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
 		FBCB8F832461177F001D8C7C = {
 			isa = PBXGroup;
 			children = (
@@ -58,9 +93,8 @@
 		FBCB8F8E2461177F001D8C7C /* Pokedex-C */ = {
 			isa = PBXGroup;
 			children = (
-				FBCB8FAC24611EDD001D8C7C /* Model */,
-				FBCB8FAB24611ED3001D8C7C /* Model Controller */,
-				FBCB8FAA24611EC1001D8C7C /* View Controllers */,
+				299D7CA22461D0BC0026D215 /* Controllers */,
+				299D7C9E2461D0A90026D215 /* Model */,
 				FBCB8FA824611E55001D8C7C /* Resources */,
 				FBCB8FA924611EAC001D8C7C /* Storyboards */,
 			);
@@ -90,27 +124,6 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		FBCB8FAA24611EC1001D8C7C /* View Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		FBCB8FAB24611ED3001D8C7C /* Model Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Model Controller";
-			sourceTree = "<group>";
-		};
-		FBCB8FAC24611EDD001D8C7C /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +150,7 @@
 		FBCB8F842461177F001D8C7C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = LID;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Karl Pfister";
 				TargetAttributes = {
@@ -182,6 +196,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBCB8F912461177F001D8C7C /* AppDelegate.m in Sources */,
+				299D7CA12461D0B80026D215 /* LIDPokemon.m in Sources */,
 				FBCB8FA224611782001D8C7C /* main.m in Sources */,
 				FBCB8F942461177F001D8C7C /* SceneDelegate.m in Sources */,
 			);
